@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="profile-card" id="profileCard">
+        <div class="profile-image">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Image" />
+        </div>
+        <div class="profile-info">
+            <h2>John Doe</h2>
+            <p class="title">Web Developer</p>
+            <p class="description">
+                Passionate developer with experience in building responsive web applications.
+            </p>
+            <div class="social-icons">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // After 5 seconds change UI
+        setTimeout(() => {
+            const card = document.getElementById('profileCard');
+            card.classList.add('impressive');
+        }, 5000);
+
+        // After 10 seconds, switch to a second impressive UI
+        setTimeout(() => {
+            const card = document.getElementById('profileCard');
+            card.classList.remove('impressive');
+            card.classList.add('impressive2');
+        }, 10000);
+    </script>
+</body>
+</html>
